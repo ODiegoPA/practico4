@@ -24,9 +24,9 @@ export class CancionService {
     async findByName(name: string): Promise<Cancion[]> {
         return this.cancionRepository.find({
             where: {
-                nombre: Like(`%${name}%`),
+                nombre: Like(`${name}%`),
             },
-            relations: ["album"], // Incluir la información del álbum
+            relations: ["album"],
         });
     }
     create(cancion: Cancion): Promise<Cancion> {

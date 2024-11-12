@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Artista } from "./artista.model";
-import { Repository } from "typeorm";
+import { Like, Repository } from "typeorm";
 
 @Injectable()
 export class ArtistaService {
@@ -15,6 +15,7 @@ export class ArtistaService {
             order: {
                 nombre: "ASC",
             },
+            relations: ["genero"],
         });
     }
     findById(id: number): Promise<Artista | null> {
@@ -28,6 +29,7 @@ export class ArtistaService {
             order: {
                 nombre: "ASC",
             },
+            relations: ["genero"],
         });
     }
     create(artista: Artista): Promise<Artista> {
@@ -44,12 +46,11 @@ export class ArtistaService {
         }
     }
     async findByName(name: string): Promise<Artista[]> {
-        const query = `
-            SELECT *
-            FROM artista
-            WHERE LOWER(nombre) LIKE LOWER('${name}%')
-        `;
-        const results = await this.artistaRepository.query(query);
-        return results;
+        return this.artistaRepository.find({
+            where: {
+                nombre: Like(`${name}%`),
+            },
+            relations: ["genero"],
+        });
     }
 }

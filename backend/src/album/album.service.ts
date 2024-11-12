@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
+import { Like, Repository } from "typeorm";
 import { Album } from "./album.model";
 
 @Injectable()
@@ -15,13 +15,14 @@ export class AlbumService {
             order: {
                 nombre: "ASC",
             },
+            relations: ["artista"],
         });
     }
 
     findById(id: number): Promise<Album | null> {
         return this.albumRepository.findOne({
             where: { id },
-            relations: ["canciones"], // Incluir las canciones relacionadas
+            relations: ["canciones", "artista"],
         });
     }
     findAlbumByArtista(artistaId: number): Promise<Album[]> {
@@ -32,17 +33,16 @@ export class AlbumService {
             order: {
                 ano: "ASC",
             },
-            relations: ["canciones"],
+            relations: ["canciones", "artista"],
         });
     }
     async findByName(name: string): Promise<Album[]> {
-        const query = `
-            SELECT *
-            FROM album
-            WHERE LOWER(nombre) LIKE LOWER('${name}%')
-        `;
-        const results = await this.albumRepository.query(query);
-        return results;
+        return this.albumRepository.find({
+            where: {
+                nombre: Like(`${name}%`),
+            },
+            relations: ["artista"],
+        });
     }
     create(album: Album): Promise<Album> {
         return this.albumRepository.save(album);
