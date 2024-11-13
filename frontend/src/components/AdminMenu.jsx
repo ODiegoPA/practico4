@@ -4,7 +4,7 @@ import './AdminMenu.css'
 import logo from './logo.png'
 const NavAdminMenu = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg">
         <Container>
         <Navbar.Brand href="/admin/generos">
             <img src={logo} alt="Spotify Logo" className="spotify-logo" />

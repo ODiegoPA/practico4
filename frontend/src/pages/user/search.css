@@ -1,0 +1,51 @@
+.buscar-container {
+    margin-top: 20px;
+}
+
+.buscar-section {
+    margin-bottom: 40px;
+}
+
+.artista-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.album-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.cancion-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.cancion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3 {
+    color: #1DB954;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+p {
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link {
+    text-decoration: none;
+}

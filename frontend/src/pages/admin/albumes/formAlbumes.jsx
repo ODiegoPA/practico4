@@ -31,6 +31,8 @@ const FormAlbumes = () => {
         axios.get(`http://localhost:3000/album/${id}`)
             .then(res => {
                 setNombre(res.data.nombre);
+                setAno(res.data.ano);
+                setArtistaId(res.data.artistaId);
             })
             .catch(error => {
                 console.error(error);

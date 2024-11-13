@@ -12,6 +12,10 @@ import ListAlbumes from './pages/admin/albumes/listAlbumes.jsx';
 import FormAlbumes from './pages/admin/albumes/formAlbumes.jsx';
 import ListCanciones from './pages/admin/canciones/listCanciones.jsx';
 import FormCanciones from './pages/admin/canciones/formCanciones.jsx';
+import MainGeneros from './pages/user/generos.jsx';
+import MainArtistas from './pages/user/artista.jsx';
+import ArtistaDetail from './pages/user/artistaDetail.jsx';
+import MainBuscar from './pages/user/search.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -64,7 +68,31 @@ const router = createBrowserRouter([
   {
     path: 'admin/canciones/formulario/:id',
     element: <FormCanciones />
-  }
+  },
+  {
+    path: 'spotify',
+    element: <MainGeneros />
+  },
+  {
+    path: 'spotify/genero/:id',
+    element: <MainArtistas />
+  },
+  {
+    path: 'spotify/artista/:id',
+    element: <ArtistaDetail />
+  },
+  {
+    path: 'spotify/busqueda/:nombre',
+    element: <MainBuscar />
+  },
+  {
+    path: 'spotify/artista/:id/:albumId?',
+    element: <ArtistaDetail />
+  },
+  {
+    path: 'spotify/artista/:id/:albumId?/:songId?',
+    element: <ArtistaDetail />,
+  },
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>

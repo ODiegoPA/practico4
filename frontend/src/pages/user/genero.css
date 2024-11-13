@@ -1,0 +1,50 @@
+body {
+    background-color: #1C1C1C;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.genre-card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.genre-card:hover {
+    transform: scale(1.05);
+}
+
+.genre-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.genre-name {
+    color: #1DB954;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-custom {
+    padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .genre-card {
+        padding: 8px;
+    }
+
+    .genre-name {
+        font-size: 16px;
+    }
+
+    .genre-image {
+        height: 150px;  /* Menor altura para dispositivos pequeños */
+    }
+}

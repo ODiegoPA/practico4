@@ -1,0 +1,39 @@
+body {
+  background-color: rgba(19, 19, 18, 1);
+  color: #ffffff;
+}
+
+.card {
+  background-color: rgba(19, 19, 18, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.table {
+  color: #ffffff;
+  background-color: rgba(19, 19, 18, 1) !important;
+  border-color: #ffffff;
+}
+
+.table thead th {
+  color: #ffffff;
+  background-color: rgba(19, 19, 18, 0.8) !important;
+  border-color: #ffffff;
+}
+
+.table tbody tr {
+  background-color: rgba(19, 19, 18, 1) !important;
+  color: #ffffff;
+}
+
+.table tbody tr td {
+  background-color: rgba(19, 19, 18, 1) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+

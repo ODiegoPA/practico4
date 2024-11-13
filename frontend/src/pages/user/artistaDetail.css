@@ -1,0 +1,51 @@
+.artista-detail-container {
+    padding: 20px;
+}
+
+.artista-header {
+    margin-bottom: 20px;
+}
+
+.artista-image {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.artista-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.artista-listeners {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.album-card {
+    margin-bottom: 20px;
+}
+
+.album-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.album-table th, .album-table td {
+    text-align: center;
+}
+
+.album-table audio {
+    width: 100%;
+}
+
+.album-image{
+    width: 150px;
+    height: 150px;
+}
+.Col{
+    margin-right: -1100px;
+}

@@ -31,6 +31,7 @@ const FormArtistas = () => {
             .then(res => {
                 setNombre(res.data.nombre);
                 setOyentes(res.data.oyentes);
+                setGeneroId(res.data.generoId);
             })
             .catch(error => {
                 console.error(error);

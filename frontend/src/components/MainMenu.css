@@ -13,7 +13,7 @@
     color: #1ED760;
 }
 
-.navbar-brand img.spotify-logo {
+.navbar-brand img {
     height: 30px;
     margin-right: 10px;
 }
@@ -29,16 +29,50 @@
 .navbar-collapse {
     justify-content: space-between;
 }
+
 .navbar-nav .dropdown-menu {
     background-color: #000;
-    border: none; 
+    border: none;
 }
 
 .navbar-nav .dropdown-item {
-    color: #1DB954; 
+    color: #1DB954;
 }
 
 .navbar-nav .dropdown-item:hover {
     color: #1ED760;
     background-color: #000;
+}
+
+.form-control {
+    background-color: #1C1C1C;
+    border: 1px solid #1DB954;
+    color: white;
+}
+
+.btn-outline-success {
+    border-color: #1DB954;
+    color: #1DB954;
+}
+
+.btn-outline-success:hover {
+    background-color: #1DB954;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: #1DB954;
+    border-color: #1DB954;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: #1ED760;
+    border-color: #1ED760;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
 }

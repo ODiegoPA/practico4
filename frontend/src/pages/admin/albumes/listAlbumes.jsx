@@ -3,6 +3,7 @@ import axios from "axios";
 import { Container, Row, Col, Card, Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NavAdminMenu from "../../../components/AdminMenu";
+import '../background.css'
 
 const ListAlbumes = () => {
     const [albumes, setAlbumes] = useState([]);
